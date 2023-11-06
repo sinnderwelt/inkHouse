@@ -1,0 +1,219 @@
+.edgeReproduction {
+    height: 1564px;
+
+    @include tablet {
+        height: 2323px;
+    }
+
+    @include tablet768 {
+        height: 1709px;
+    }
+
+    @include phones {
+        height: 3390px;
+    }
+
+    .reproductionMain {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+
+        .reproductionHeader {
+            display: flex;
+            flex-basis: 44px;
+            margin-bottom: 30px;
+
+            @include tablet768 {
+                height: 100%;
+                flex-direction: column;
+                justify-content: space-between;
+                margin-bottom: 0;
+            }
+
+            h3 {
+                font-size: 40px;
+                font-weight: 500;
+                line-height: 44px;
+                color: $black;
+                display: flex;
+                align-items: center;
+                flex: 1;
+            }
+
+            .reproductionHeaderNavigation {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                flex-basis: 428px;
+
+                @include tablet768 {
+                    justify-content: flex-start;
+                    flex-basis: 87px;
+                }
+
+                @include phones {
+                    justify-content: space-between;
+                    flex-wrap: wrap;
+                    margin: 5px 0;
+                }
+
+                .reproductionBtn.active {
+                    background: #376B44;
+                    color: $white;
+                }
+
+                .reproductionBtn {
+                    color: $black;
+                    font-size: 20px;
+                    line-height: 24px;
+                    font-weight: 500;
+                    cursor: pointer;
+                    padding: 10px 20px;
+                    border-radius: 20px;
+                    background: #D4E8D9;
+
+                    @include tablet768 {
+                        margin-right: 30px;
+
+                        &:last-child {
+                            margin-right: 0;
+                        }
+                    }
+
+                    @include phones {
+                        margin: 5px 0;
+                    }
+                    
+                }
+            }
+        }
+
+        .reproductionCountry {
+            flex: 1;
+
+            .reproductionCountryItem {
+                display: none;
+            }
+            
+            .reproductionCountryItem.active {
+                display: block;
+                height: 100%;
+
+                .reproductionCountryCards {
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+                    align-content: space-between;
+                    height: 100%;
+
+                    .reproductionCountryCardsItem {
+                        display: flex;
+                        flex-direction: column;
+                        padding: 20px 20px 30px 20px;
+                        height: 730px;
+                        width: calc((100% - 60px) / 3);
+                        background: #E1EDE6;
+
+                        @include tablet {
+                        width: calc((100% - 30px) / 2);
+                        }
+
+                        @include tablet768 {
+                            height: 515px;
+                        }
+
+                        @include phones {
+                            width: 100%;
+                            margin-bottom: 30px;
+                        }
+
+                        .reproductionCountryCardsImages {
+                            position: relative;
+                            flex-basis: 422px;
+
+                            @include tablet768 {
+                                flex-basis: 250px;
+                            }
+
+                            img {
+                                position: absolute;
+                                height: 100%;
+                                width: 100%;
+                            }
+                        }
+                        
+                        .reproductionCountryCardsContent {
+                            position: relative;
+                            flex: 1;
+
+                            @include tablet768 {
+                                flex-basis: 274px;
+                            }
+
+                            .reproductionCountryCardsContentAuthor {
+                                color: $gray;
+                                font-size: 18px;
+                                line-height: 21px;
+                                font-weight: 500;
+                                padding-top: 20px;
+
+                                @include phones {
+                                    font-size: 16px;
+                                }
+                            }
+
+                            h4 {
+                                color: $black;
+                                font-weight: 500;
+                                font-size: 30px;
+                                line-height: 35px;
+                                padding-top: 10px;
+
+                                @include phones {
+                                    font-size: 24px;
+                                }
+                            }
+
+                            .reproductionCountryCardsContentMaterial {
+                                color: $black;
+                                font-size: 18px;
+                                font-weight: 500;
+                                line-height: 21px;
+                                padding-top: 8px;
+
+                                @include phones {
+                                    font-size: 16px;
+                                }
+                            }
+
+                            .reproductionCountryCardsContentPrice {
+                                color: $green;
+                                font-size: 24px;
+                                font-weight: 500;
+                                line-height: 21px;
+                                padding-top: 30px;
+                                
+                                @include phones {
+                                 font-size: 20px;   
+                                }
+                            }
+
+                            button {
+                                position: absolute;
+                                bottom: 0;
+                                width: 100%;
+                                padding: 20px 60px;
+                                color: $green;
+                                border: 1px solid $green;
+                                
+                                @include phones {
+                                font-size: 18px;   
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

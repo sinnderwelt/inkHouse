@@ -1,0 +1,210 @@
+.edgeFooter {
+    background: #e1ede6;
+
+    @include tablet {
+        height: 250px;
+    }
+
+    @include tablet768 {
+        height: 345px;
+    }
+
+    .container {
+
+        footer {
+            display: flex;
+            padding-top: 23px;
+            padding-bottom: 23px;
+
+            @include tablet {
+                height: 100%;
+                flex-wrap: wrap;
+            }
+
+            @include tablet768 {
+                justify-content: center;
+            }
+
+            .footerLogo {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                flex-basis: 170px;
+                margin-right: 115px;
+
+                @include tablet {
+                    align-items: flex-start;
+                    flex-direction: row;
+                    flex-basis: 100%;
+                    margin-right: 0;
+                    margin-bottom: 30px;
+                    height: 52px;
+                }
+
+                @include tablet768 {
+                    height: 50px;
+                }
+
+                @include phones {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    height: 90px;
+                    margin: 0;
+                    border-bottom: 1px solid #c3d1c6;
+                }
+                
+                .footerLogoHeader {
+                    display: flex;
+                    align-items: center;
+
+                    a {
+                        color: $green;
+                        font-weight: 700;
+                        font-size: 20px;
+                        margin-left: 8px;
+                    }
+                }
+
+                .footerLogoNumber {
+
+                    a {
+                        color: $black;
+                        font-weight: 500;
+                        font-size: 20px;
+                    }
+
+                    p {
+                        color: $gray;
+                        font-weight: 500;
+                        font-size: 18px;
+                    }
+
+                    @include phones {
+                        text-align: center;
+                        margin-bottom: 30px;
+                    }
+                }
+            }
+    
+            .footerLinks {
+                flex: 1;
+
+                @include tablet768 {
+                    flex-basis: 100%;
+                }
+
+                ul {
+                    display: flex;
+
+                    @include tablet {
+                        justify-content: space-between;
+                        height: 100%;
+                        border-bottom: 1px solid #c3d1c6;
+                        padding-bottom: 15px;
+                    }
+
+                    @include phones {
+                        padding-bottom: 0;
+                    }
+
+                    li {
+                        display: flex;
+                        flex-direction: column;
+                        margin-right: 60px;
+
+                        &:last-child {
+                            margin-right: 0;
+                        }
+
+                        @include tablet768 {
+                            margin-right: 0;
+                        }
+
+                        a {
+                            color: $gray;
+                            font-weight: 500;
+                            font-size: 18px;
+                            line-height: 27px;
+
+                            @include tablet {
+                                margin-top: 6px;
+
+                                &:first-child {
+                                    margin-top: 0;
+                                }
+                            }
+
+                            &:first-child {
+                                color: $black;
+                                font-weight: 500;
+                                font-size: 20px;
+                                line-height: 24px;
+                            }
+                        }
+                    }
+                }
+            }
+    
+            .footerSocial {
+                display: flex;
+                flex-direction: column;
+                flex-basis: 132px;
+
+                @include tablet {
+                    margin-top: 15px;
+                    flex-basis: 170px;
+                }
+
+                .footerSocialIcon {
+                    display: flex;
+                    justify-content: space-between;
+                    // background: darkgray;
+                    padding-bottom: 10px;
+
+                    @include tablet {
+                        margin-right: 35px;
+                    }
+
+                    @include tablet768 {
+                        margin-right: 0;
+                    }
+
+                    #footerSocialIconFacebook {
+                        height: 24px;
+                        width: 24px;
+                    }
+
+                    #footerSocialIconInst {
+                        height: 24px;
+                        width: 24px;
+                    }
+
+                    #footerSocialIconYoutube {
+                        height: 24px;
+                        width: 24px;
+                    }
+                }
+
+                .footerSocialCopyright {
+                    
+                    @include tablet768 {
+                        display: flex;
+                        width: 175px;
+                    }
+
+                    p {
+                        color: $gray;
+                        font-size: 12px;
+                        font-weight: 500;
+                        line-height: 14px;
+                    }
+
+                    @include tablet768 {
+                        flex: 1;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,34 @@
+$greenWhite: #E1EDE6;
+$yellow: #EEDB6D;
+$black: #2C2D35;
+$green: #598d66;
+$gray: #86928B;
+$white: #f4f6f5;
+
+$z-point: 100;
+
+@mixin advantage-icon {
+    content: '';
+    display: block;
+    position: absolute;
+    max-width: 100%;
+  }
+
+  @mixin btn {
+    font-size: rem(18px);
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #fff;
+    padding: rem(16px) rem(36px);
+    border-radius: rem(100px);
+    background-color: $red;
+  }
+  @mixin description-icon {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    background-repeat: no-repeat;
+    height: rem(41px);
+    width: rem(41px);
+    max-width: 100%;
+  }

@@ -1,0 +1,125 @@
+.edgeCollection {
+    padding-top: 70px;
+
+    .collectionMenu {
+        position: relative;
+        height: 574px;
+        background: url(./assets/images/backgroundMan.png) no-repeat;
+        background-position: center center;
+        background-size: cover;
+
+        @include tablet {
+            background-size: 100% 100%;
+
+            &::before {
+                content: '';
+                display: block;
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background-color:rgba(0, 0, 0, .5);
+            }
+        }
+
+        @include phones {
+         height: 690px;                           
+        }
+    
+        .collectionContent {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 100%;
+    
+            .collectionContentHeader {
+                display: flex;
+
+                @include tablet768 {
+                    align-items: center;
+                }
+        
+                img {
+                    margin-right: 15px;
+
+                    @include tablet768 {
+                        height: 60px;
+                        width: auto;
+                    }
+                }
+        
+                h2 {
+                    width: 75%;
+                    color: $white;
+                    font-weight: 500;
+                    font-size: 40px;
+                    line-height: 40px;
+
+                    @include tablet768 {
+                        font-size: 24px;
+                    }
+                }
+            }
+        
+            .collectionContentAbout {
+                padding: 40px 0 40px 0;    
+    
+                p {
+                    color: $white;
+                    font-weight: 500;
+                    font-size: 18px;
+                    line-height: 27px;
+                    padding-bottom: 20px;
+                    width: 55%;
+    
+                    &:last-child {
+                        width: 51%;
+                    }
+
+                    @include tablet {
+                        width: 100%;
+
+                        &:last-child {
+                            width: 100%;
+                        }
+                    }
+
+                    @include tablet768 {
+                        font-size: 16px;
+                    }
+                }
+            }
+        
+            .collectionContentBtn {   
+                button {
+                    background: $yellow;
+                    border: 1px solid $yellow;
+                    padding: 20px 60px 20px 60px;
+    
+                    &:hover {
+                        color: $black;
+                        background: #FAEB97;
+                    }
+
+                    &:focus {
+                        color: #a38314;
+                        background: #FAEB97;
+                        border: 1px solid #a38314;
+                    }
+
+                    &:active {
+                        background: #b9b949;
+                    }
+
+                    @include phones {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}

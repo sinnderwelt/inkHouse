@@ -1,0 +1,377 @@
+    .burger {
+        display: none;
+
+        @include phones {
+            display: none;
+            top: 130px;
+            position: absolute;
+            height: 263px;
+            width: 100%;
+            background: #E1EDE6;
+            z-index: 1;
+    
+            .forFlex {
+                height: 100%;
+    
+                .list {
+                    height: 100%;      
+
+                    li {
+                        padding-bottom: 50px;  
+                        color: #2C2D35;
+                        font-size: 18px;
+                        line-height: 21px;
+                        font-weight: 500;
+                    }
+                }
+            }
+        }
+    }
+
+    .active {
+
+        @include phones {
+            display: flex;
+        }
+    }
+    
+    
+    .edgeHeader{
+        height: 100vh;
+
+        @include tablet {
+            height: 480px;
+            margin-bottom: 70px;
+        }
+
+        @include tablet768 {
+            height: 412px;
+            margin-bottom: 50px;
+        }
+
+        @include phones {
+            height: 363px;
+        }
+    
+        .headerMenu {
+            position: relative;
+            height: 100px;
+            background: $greenWhite;
+
+            @include tablet768 {
+                height: 123px;
+            }
+
+            @include phones {
+                height: 130px;
+
+                &::before {
+                    position: absolute;
+                    content: '';
+                    background: #fff;
+                    height: 68px;
+                    width: 100%;
+                    z-index: 0;
+                }
+            }
+    
+            .container {
+                display: flex;
+
+                @include tablet768 {
+                    flex-direction: column;
+                }
+                 
+                .headerMenuNamecopr {
+                    display: flex;
+                    align-items: center;
+                    flex: 1;
+
+                    @include tablet768 {
+                        justify-content: center;
+                        width: 100%;
+                        border-bottom: 2px solid #C3D1C6;
+                    }
+
+                    @include phones {
+                        z-index: 1;
+                        border-bottom: none;
+                    }
+
+                    .headerMenuCorpLogo {
+                        margin-right: 10px;
+
+                        img {
+                            height: 100%;
+                            width: auto;
+                        }
+                    }
+
+                    .headerMenuCorpName {
+                        a {
+                            color: $green;
+                            font-weight: 700;
+                            font-size: 20px;
+                        }
+                    }
+                }
+    
+                .headerMenuList {
+                    display: flex;
+                    flex: 1;
+                    align-items: center;
+                    justify-content: right;
+
+                    @include tablet {
+                        flex: 2;
+                    }
+
+                    @include tablet768 {
+                        flex: 1;
+                    }
+                    
+                    @include phones {
+                        z-index: 0;
+                    }
+
+                    
+
+                    ul {
+                        display: flex;
+
+                        @include tablet {
+                            justify-content: space-between;
+                            width: 100%;
+                            align-items: center;
+                        }
+
+                        @include phones {
+                            justify-content: space-between;
+                        }
+
+                        li {
+                            margin-right: 50px;
+                            color: $black;
+                            font-weight: 500;
+                            font-size: 20px;
+
+                            @include tablet {
+                                font-size: 18px;
+                                font-weight: 600;
+
+                                &:nth-child(3) {
+                                    width: 50px;
+                                }
+                            }
+
+                            @include phones {
+                                display: none;
+
+                                &:first-child {
+                                    display: flex;
+                                }
+
+                                &:last-child {
+                                    display: flex;
+                                }
+                            }
+
+                            :hover {
+                                color: #598D66;
+                            }
+
+                            :focus {
+                                background: #D4E8D9;
+                            }
+
+                            :active {
+                                color: #376B44;
+                            }
+    
+                            &:last-child{
+                                margin-right: 0;
+                            }
+
+
+                            .headerMenuListClick {
+
+                                @include phones {
+                                    display: flex;
+                                    align-items: center;
+                                    height: 18px;
+                                    width: 17px;
+                                }
+
+                                .headerMenuListBurger {
+                                    position: relative;
+                                    display: none;
+    
+                                    @include phones {
+                                        display: flex;
+                                        flex-direction: column;
+                                        justify-content: center;
+                                        height: 100%;
+                                    }
+    
+                                    .headerMenuListBurgerLine {
+                                        height: 2px;
+                                        width: 20px;
+                                        background: #4C5866;
+                                        border-radius: 5px;
+                                        margin: 2px 0;
+                                        transition: 0.2s;
+                                    }
+
+                                    .activeCenter {
+                                        display: none;
+                                    }
+
+                                    .activeTop {
+                                        position: absolute;
+                                        top: 5px;
+                                        rotate: 45deg;
+                                        transition: 0.2s;
+                                    }
+
+                                    .activeBottom {
+                                        position: absolute;
+                                        top: 5px;
+                                        rotate: -45deg;
+                                        transition: 0.2s;
+                                    }
+
+                                    
+                                }
+                            }
+
+                            svg {
+                                height: 24px;
+                                width: 24px;
+                            }
+
+                            .active {
+
+                                @include phones {
+                                    display: none;
+                                }
+                            }
+                        }       
+                    }
+                }
+            }
+        }
+    
+        .headerBody {
+            height: calc(100% - 100px);
+    
+            .container {
+                display: flex;
+
+                .headerBodyPicture {
+                    display: flex;
+                    flex: 1;
+
+                    @include tablet {
+                        align-items: center;
+                    }
+
+                    @include tablet768 {
+                        margin-right: 30px;
+                    }
+
+                    @include phones {
+                        display: none;
+                    }
+
+                    img {
+                        height: 100%;
+                        width: 100%;
+
+                        @include tablet {
+                            max-height: 380px;
+                            width: auto;
+                        }
+
+                        @include tablet768 {
+                            max-height: 239px;
+                            width: 100%;
+                        }
+                    }
+                }
+
+                .headerBodyContent {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-evenly;
+                    flex: 1;
+
+                    @include tablet {
+                        justify-content: space-evenly;
+                    }
+
+                    h1 {
+                        max-width: 540px;
+                        font-size: 60px;
+                        font-weight: 500;
+                        line-height: 66px;
+
+                        @include tablet {
+                            max-width: 330px;
+                            font-size: 40px;
+                            line-height: 40px;
+                        }
+
+                        @include tablet768 {
+                            font-size: 36px;
+                        }
+
+                        @include phones {
+                            max-width: 285px;
+                        }
+
+                        span {
+                            color: $green;
+                        }
+                    }
+
+                    p {
+                        max-width: 540px;
+                        font-size: 18px;
+                        font-weight: 500;
+                        color: $gray;
+
+                        @include tablet {
+                            max-width: 330px;
+                        }
+
+                        @include tablet768 {
+                            font-size: 16px;
+                        }
+                    }
+
+                    button {
+                        background: inherit;
+                        color: $green;
+                        padding: 20px 60px 20px 60px;
+                        border: 1px solid $green;
+
+                        &:hover {
+                            color: $white;
+                            background: $green;
+                        }
+
+                        &:focus {
+                            color: $green;
+                            background: #D4E8D9;
+                        }
+
+                        &:active {
+                            color: $white;
+                            background: #376B44;
+                        }
+                    }
+                }
+            }
+        }
+    }
+

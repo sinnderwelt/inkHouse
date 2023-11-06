@@ -1,0 +1,88 @@
+.edgeTeam {
+        
+    .teamContent {
+        display: flex;
+        padding-top: 70px;
+        padding-bottom: 70px;
+
+        @include tablet {
+            flex-direction: column;
+        }
+
+        .teamPicture {
+            margin-right: 30px;
+
+            @include phones {
+                margin: 0;
+            }
+
+            img {
+
+                @include tablet {
+                    width: 510px;
+                }
+
+                @include tablet768 {
+                    width: auto;
+                    height: 375px;
+                }
+
+                @include phones {
+                    max-width: 100%;
+                    height: auto;
+                }
+            }
+        }
+
+        .teamOur {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            flex: 1;
+
+            h3 {
+                margin-top: 90px;
+                margin-bottom: 20px;
+                font-weight: 500;
+                line-height: 25%;
+                font-size: 40px;
+
+                @include tablet {
+                    margin-top: 30px;
+                }
+
+                @include tablet768 {
+                    font-size: 24px;
+                }
+            }
+
+            p {
+                margin-bottom: 20px;
+                font-size: 18px;
+                font-weight: 500;
+                line-height: 27px;
+
+                @include tablet768 {
+                    font-size: 16px;
+                    line-height: 22px;
+                }
+
+            }
+
+            div {
+                img {
+                    padding-right: 30px;
+
+                    &:last-child {
+                        padding-right: 0;
+                    }
+                }
+
+                @include phones {
+                    display: flex;
+                    justify-content: space-between;
+                }
+            }
+        }
+    }
+}
